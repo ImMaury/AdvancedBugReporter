@@ -1,4 +1,4 @@
-package me.im_maury.bugreporter.commands;
+package me.im_maury.advancedbugreporter.commands;
 
 
 import org.bukkit.Bukkit;
@@ -16,7 +16,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-import static me.im_maury.bugreporter.Main.getJsonManager;
+import static me.im_maury.advancedbugreporter.Main.getJsonManager;
 
 public class ReportBug implements CommandExecutor {
 
@@ -67,7 +67,7 @@ public class ReportBug implements CommandExecutor {
                 return true;
             }
             Player p = (Player) sender;
-            if (!p.hasPermission("bugreporter.report")) {
+            if (!p.hasPermission("advancedbugreporter.report")) {
                 p.sendMessage("§cYou don't have enough permissions to perform this command.");
                 return true;
 
@@ -83,7 +83,7 @@ public class ReportBug implements CommandExecutor {
             p.sendMessage("§8[§cBugReporter§8] §bReport sent!");
             p.playSound(p.getLocation(), Sound.NOTE_PLING, 10, 10);
             for (Player player : Bukkit.getOnlinePlayers()) {
-                if (player.hasPermission("bugreporter.receive")) {
+                if (player.hasPermission("advancedbugreporter.receive")) {
                     player.playSound(player.getLocation(), Sound.NOTE_PLING, 10, 10);
                     player.sendMessage("§8[§cBugReporter§8] §8[§2#" + id + "§8] §8[§2" + p.getName() + "§8] §7" + reportText);
                     getJsonManager.addStaffer(id, player.getName());

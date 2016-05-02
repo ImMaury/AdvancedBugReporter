@@ -1,17 +1,17 @@
-package me.im_maury.bugreporter.commands;
+package me.im_maury.advancedbugreporter.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.json.simple.JSONObject;
 
-import static me.im_maury.bugreporter.Main.getJsonManager;
+import static me.im_maury.advancedbugreporter.Main.getJsonManager;
 
 public class ReportDel implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("reportdel")) {
-            if (!sender.hasPermission("bugreporter.del")) {
+            if (!sender.hasPermission("advancedbugreporter.del")) {
                 sender.sendMessage("§cYou don't have enough permissions to perform this command.");
                 return true;
             }
@@ -56,6 +56,17 @@ public class ReportDel implements CommandExecutor {
                         }
                     }
                     sender.sendMessage("§8[§cBugReporter§8] §a" + playersDeleted + " §bbug reports deleted.");
+                    getJsonManager.save();
+                    break;
+                case "all":
+                    int reportsDeleted = 0;
+                    if (args.length != 1) return false;
+                    if (numberReports == 0) sender.sendMessage("§8[§cBugReporter§8] §cThere are no bug reports.");
+                    for (JSONObject obj : getJsonManager.getSuperObjects()) {
+                        getJsonManager.getRoot().remove(obj);
+                        reportsDeleted++;
+                    }
+                    sender.sendMessage("§8[§cBugReporter§8] §a" + reportsDeleted + " §bbug reports deleted.");
                     getJsonManager.save();
                     break;
                 default:

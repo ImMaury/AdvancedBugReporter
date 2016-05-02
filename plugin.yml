@@ -1,7 +1,7 @@
-name: BugReporter
-main: me.im_maury.bugreporter.Main
+name: AdvancedBugReporter
+main: me.im_maury.advancedbugreporter.Main
 author: Im_Maury
-version: 1.0
+version: 0.1.1
 commands:
    reportbug:
       usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.

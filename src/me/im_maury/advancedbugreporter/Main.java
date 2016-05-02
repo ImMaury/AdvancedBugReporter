@@ -1,8 +1,8 @@
-package me.im_maury.bugreporter;
+package me.im_maury.advancedbugreporter;
 
-import me.im_maury.bugreporter.commands.*;
-import me.im_maury.bugreporter.filemanager.JsonManager;
-import me.im_maury.bugreporter.listeners.OnStafferJoin;
+import me.im_maury.advancedbugreporter.commands.*;
+import me.im_maury.advancedbugreporter.filemanager.JsonManager;
+import me.im_maury.advancedbugreporter.listeners.OnStafferJoin;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,12 +17,12 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("reportdel").setExecutor(new ReportDel());
         getCommand("reporttp").setExecutor(new ReportTp());
         getCommand("reporthelp").setExecutor(new ReportHelp());
-        getLogger().info("[ReportBug] Plugin enabled!");
+        getLogger().info("[AdvancedBugReporter] Plugin enabled!");
     }
 
     public void onDisable() {
         //getJsonManager.save();
-        getLogger().info("[ReportBug] Plugin disabled!");
+        getLogger().info("[AdvancedBugReporter] Plugin disabled!");
     }
 
 }

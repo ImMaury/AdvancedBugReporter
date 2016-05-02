@@ -1,4 +1,4 @@
-package me.im_maury.bugreporter.listeners;
+package me.im_maury.advancedbugreporter.listeners;
 
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -10,13 +10,13 @@ import org.json.simple.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import static me.im_maury.bugreporter.Main.getJsonManager;
+import static me.im_maury.advancedbugreporter.Main.getJsonManager;
 
 public class OnStafferJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (p.hasPermission("bugreporter.receive")) {
+        if (p.hasPermission("advancedbugreporter.receive")) {
             List<JSONObject> unreadReports = new ArrayList<>();
             for (JSONObject obj : getJsonManager.getSuperObjects()) {
                 if (!getJsonManager.getStaffer(obj.get("id").toString()).contains(p.getName())) {

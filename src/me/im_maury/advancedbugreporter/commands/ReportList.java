@@ -1,18 +1,18 @@
-package me.im_maury.bugreporter.commands;
+package me.im_maury.advancedbugreporter.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.json.simple.JSONObject;
 
-import static me.im_maury.bugreporter.Main.getJsonManager;
+import static me.im_maury.advancedbugreporter.Main.getJsonManager;
 
 public class ReportList implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("reportlist")) {
-            if (!sender.hasPermission("bugreporter.list")) {
+            if (!sender.hasPermission("advancedbugreporter.list")) {
                 sender.sendMessage("§cYou don't have enough permissions to perform this command.");
                 return false;
             }

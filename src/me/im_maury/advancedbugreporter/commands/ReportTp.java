@@ -1,4 +1,4 @@
-package me.im_maury.bugreporter.commands;
+package me.im_maury.advancedbugreporter.commands;
 
 import org.bukkit.Location;
 import org.bukkit.Sound;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static me.im_maury.bugreporter.Main.getJsonManager;
+import static me.im_maury.advancedbugreporter.Main.getJsonManager;
 
 public class ReportTp implements CommandExecutor {
     @Override
@@ -18,7 +18,7 @@ public class ReportTp implements CommandExecutor {
                 return true;
             }
             Player p = (Player) sender;
-            if (!p.hasPermission("bugreporter.tp")) {
+            if (!p.hasPermission("advancedbugreporter.tp")) {
                 p.sendMessage("§cYou don't have enough permissions to perform this command.");
                 return true;
 

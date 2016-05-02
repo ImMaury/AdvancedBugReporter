@@ -1,4 +1,4 @@
-package me.im_maury.bugreporter.filemanager;
+package me.im_maury.advancedbugreporter.filemanager;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
