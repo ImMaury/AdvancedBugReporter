@@ -2,7 +2,7 @@
 [Documentation](https://github.com/ImMaury/AdvancedBugReporter/wiki) |
 [Spigot Page](https://www.spigotmc.org/resources/advancedbugreporter.22556/)
 
-Advanced BugReporter is a Bukkit plugin designed to help server owners keep track of bugs in their networks using players' assistance. It's especially useful to test new gamemodes and be sure that everything works properly.
+AdvancedBugReporter is a Bukkit plugin designed to help server owners keep track of bugs in their networks using players' assistance. It's especially useful to test new gamemodes and be sure that everything works properly.
 
 ## Features
 - User-friendly reporting system
