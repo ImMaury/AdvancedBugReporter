@@ -1,6 +1,6 @@
 # AdvancedBugReporter [![Release](https://img.shields.io/badge/latest%20release-v0.1.1-green.svg)](https://github.com/ImMaury/AdvancedBugReporter/releases)
 [Documentation](https://github.com/ImMaury/AdvancedBugReporter/wiki) |
-[Spigot Page](https://www.spigotmc.org/resources/advancedbugreporter.22556/) |
+[Spigot Page](https://www.spigotmc.org/resources/advancedbugreporter.22556/)
 
 Advanced BugReporter is a Bukkit plugin designed to help server owners keep track of bugs in their networks using players' assistance. It's especially useful to test new gamemodes and be sure that everything works properly.
 
