@@ -17,10 +17,10 @@ public class ReportList implements CommandExecutor {
                 return false;
             }
             if (getJsonManager.getRoot().size() == 0) {
-                sender.sendMessage("§8[§cBugReporter§8] §cThere are no bug reports.");
+                sender.sendMessage("§8[§cAdvancedBugReporter§8] §cThere are no bug reports.");
                 return true;
             }
-            sender.sendMessage("§8[§cBugReporter§8] §bBug reports are shown below.");
+            sender.sendMessage("§8[§cAdvancedreloadBugReporter§8] §bBug reports are shown below.");
             for (JSONObject obj : getJsonManager.getSuperObjects()) {
                 sender.sendMessage("§8[§2#" + obj.get("id") + "§8] §8[§2" + obj.get("name") + "§8] §7" + obj.get("report"));
             }

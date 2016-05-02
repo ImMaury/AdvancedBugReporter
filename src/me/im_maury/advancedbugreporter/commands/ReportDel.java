@@ -19,7 +19,7 @@ public class ReportDel implements CommandExecutor {
                 return false;
             }
             if (getJsonManager.getRoot().size() == 0) {
-                sender.sendMessage("§8[§cBugReporter§8] §cThere are no bug reports.");
+                sender.sendMessage("§8[§cAdvancedBugReporter§8] §cThere are no bug reports.");
                 return true;
             }
             int numberReports = getJsonManager.getRoot().size();
@@ -35,10 +35,10 @@ public class ReportDel implements CommandExecutor {
                             }
                         }
                         if (numberReports == getJsonManager.getRoot().size()) {
-                            sender.sendMessage("§8[§cBugReporter§8] §cID " + '"' + "§4" + args[i] + "§c" + '"' + " matches with no bug reports.");
+                            sender.sendMessage("§8[§cAdvancedBugReporter§8] §cID " + '"' + "§4" + args[i] + "§c" + '"' + " matches with no bug reports.");
                         }
                     }
-                    sender.sendMessage("§8[§cBugReporter§8] §a" + idsDeleted + " §bbug reports deleted.");
+                    sender.sendMessage("§8[§cAdvancedBugReporter§8] §a" + idsDeleted + " §bbug reports deleted.");
                     getJsonManager.save();
                     break;
                 case "player":
@@ -52,21 +52,21 @@ public class ReportDel implements CommandExecutor {
                             }
                         }
                         if (numberReports == getJsonManager.getRoot().size()) {
-                            sender.sendMessage("§8[§cBugReporter§8] §cPlayer " + '"' + "§4" + args[i] + "§c" + '"' + " matches with no bug reports.");
+                            sender.sendMessage("§8[§cAdvancedBugReporter§8] §cPlayer " + '"' + "§4" + args[i] + "§c" + '"' + " matches with no bug reports.");
                         }
                     }
-                    sender.sendMessage("§8[§cBugReporter§8] §a" + playersDeleted + " §bbug reports deleted.");
+                    sender.sendMessage("§8[§cAdvancedBugReporter§8] §a" + playersDeleted + " §bbug reports deleted.");
                     getJsonManager.save();
                     break;
                 case "all":
                     int reportsDeleted = 0;
                     if (args.length != 1) return false;
-                    if (numberReports == 0) sender.sendMessage("§8[§cBugReporter§8] §cThere are no bug reports.");
+                    if (numberReports == 0) sender.sendMessage("§8[§cAdvancedBugReporter§8] §cThere are no bug reports.");
                     for (JSONObject obj : getJsonManager.getSuperObjects()) {
                         getJsonManager.getRoot().remove(obj);
                         reportsDeleted++;
                     }
-                    sender.sendMessage("§8[§cBugReporter§8] §a" + reportsDeleted + " §bbug reports deleted.");
+                    sender.sendMessage("§8[§cAdvancedBugReporter§8] §a" + reportsDeleted + " §bbug reports deleted.");
                     getJsonManager.save();
                     break;
                 default:

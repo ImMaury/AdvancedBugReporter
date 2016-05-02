@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
 
-    public static JsonManager getJsonManager = new JsonManager("plugins/BugReporter/reports.json");
+    public static JsonManager getJsonManager = new JsonManager("plugins/AdvancedBugReporter/reports.json");
 
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new OnStafferJoin(), this);

@@ -28,7 +28,7 @@ public class OnStafferJoin implements Listener {
                 p.playSound(p.getLocation(), Sound.NOTE_PLING, 10, 10);
                 p.sendMessage("§aHey dude! You have some unread bug reports.");
                 for (JSONObject report : unreadReports) {
-                    p.sendMessage("§8[§cBugReporter§8] §8[§2#" + report.get("id") + "§8] §8[§2" + report.get("name") + "§8] §7" + report.get("report"));
+                    p.sendMessage("§8[§cAdvancedBugReporter§8] §8[§2#" + report.get("id") + "§8] §8[§2" + report.get("name") + "§8] §7" + report.get("report"));
                 }
             }
         }

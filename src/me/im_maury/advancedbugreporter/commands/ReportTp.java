@@ -29,7 +29,7 @@ public class ReportTp implements CommandExecutor {
             Location reportLocation = getJsonManager.getLocation(args[0]);
             if (reportLocation != null) {
                 p.teleport(reportLocation);
-                p.sendMessage("§8[§cBugReporter§8] §bTeleported to ID §c" + args[0] + "§b's location.");
+                p.sendMessage("§8[§cAdvancedBugReporter§8] §bTeleported to ID §c" + args[0] + "§b's location.");
                 p.playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 10, 10);
             } else {
                 sender.sendMessage("§8[§cBugReporter§8] §cID " + '"' + "§4" + args[0] + "§c" + '"' + " matches with no bug reports.");

@@ -80,12 +80,12 @@ public class ReportBug implements CommandExecutor {
                 reportText += arg + " ";
             }
             String id = createNewReport(p.getName(), p.getUniqueId().toString(), reportText.substring(0, reportText.length() - 1), p.getLocation());
-            p.sendMessage("§8[§cBugReporter§8] §bReport sent!");
+            p.sendMessage("§8[§cAdvancedBugReporter§8] §bReport sent!");
             p.playSound(p.getLocation(), Sound.NOTE_PLING, 10, 10);
             for (Player player : Bukkit.getOnlinePlayers()) {
                 if (player.hasPermission("advancedbugreporter.receive")) {
                     player.playSound(player.getLocation(), Sound.NOTE_PLING, 10, 10);
-                    player.sendMessage("§8[§cBugReporter§8] §8[§2#" + id + "§8] §8[§2" + p.getName() + "§8] §7" + reportText);
+                    player.sendMessage("§8[§cAdvancedBugReporter§8] §8[§2#" + id + "§8] §8[§2" + p.getName() + "§8] §7" + reportText);
                     getJsonManager.addStaffer(id, player.getName());
                 }
             }
