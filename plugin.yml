@@ -1,0 +1,15 @@
+name: BugReporter
+main: me.im_maury.bugreporter.Main
+author: Im_Maury
+version: 1.0
+commands:
+   reportbug:
+      usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.
+   reportlist:
+      usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.
+   reportdel:
+      usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.
+   reporttp:
+      usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.
+   reporthelp:
+      usage: §cIncorrect usage. Type §4/bugreporter help §cfor more info.
