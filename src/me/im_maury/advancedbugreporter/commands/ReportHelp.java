@@ -12,7 +12,7 @@ public class ReportHelp implements CommandExecutor {
                 sender.sendMessage("§cThis command can be only performed by in-game players.");
                 return true;
             }
-            sender.sendMessage("§7~~~~~~~~ §8[§cAdvancedBugReporter §cv1.0§8] by Im_Maury §7~~~~~~~~~");
+            sender.sendMessage("§7~~~~~~~~ §8[§cAdvancedBugReporter §cv0.1.1§8] by Im_Maury §7~~~~~~~~~");
             sender.sendMessage("§7/reportbug <text> - §bSends a bug report");
             sender.sendMessage("§7/reportlist - §bShows stored bug reports");
             sender.sendMessage("§7/reportdel <selector> <ID/playername> - §bDeletes bug reports. Available selectors: id, player, all");
