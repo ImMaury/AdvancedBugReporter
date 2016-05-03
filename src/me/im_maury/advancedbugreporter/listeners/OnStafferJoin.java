@@ -1,5 +1,6 @@
 package me.im_maury.advancedbugreporter.listeners;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -25,7 +26,11 @@ public class OnStafferJoin implements Listener {
                 }
             }
             if (unreadReports.size() != 0) {
-                p.playSound(p.getLocation(), Sound.NOTE_PLING, 10, 10);
+                if (Bukkit.getVersion().contains("1.9")) {
+                    p.playSound(p.getLocation(), Sound.valueOf("BLOCK_NOTE_PLING"), 10, 10);
+                } else {
+                    p.playSound(p.getLocation(), Sound.valueOf("NOTE_PLING"), 10, 10);
+                }
                 p.sendMessage("§aHey dude! You have some unread bug reports.");
                 for (JSONObject report : unreadReports) {
                     p.sendMessage("§8[§cAdvancedBugReporter§8] §8[§2#" + report.get("id") + "§8] §8[§2" + report.get("name") + "§8] §7" + report.get("report"));

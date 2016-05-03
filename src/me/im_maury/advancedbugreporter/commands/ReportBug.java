@@ -39,8 +39,8 @@ public class ReportBug implements CommandExecutor {
     }
 
     @SuppressWarnings("unchecked")
-    private String createNewReport(String name, String uuid, String report, Location rawLoc) {
-        String id = getId();
+    private String createNewReport(final String name, final String uuid, final String report, final Location rawLoc) {
+        final String id = getId();
         getJsonManager.getRoot().add(getJsonManager.newJSONObject(new HashMap() {{
             put("id", id);
             put("name", name);
@@ -81,10 +81,18 @@ public class ReportBug implements CommandExecutor {
             }
             String id = createNewReport(p.getName(), p.getUniqueId().toString(), reportText.substring(0, reportText.length() - 1), p.getLocation());
             p.sendMessage("§8[§cAdvancedBugReporter§8] §bReport sent!");
-            p.playSound(p.getLocation(), Sound.NOTE_PLING, 10, 10);
+            if (Bukkit.getVersion().contains("1.9")) {
+                p.playSound(p.getLocation(), Sound.valueOf("BLOCK_NOTE_PLING"), 10, 10);
+            } else {
+                p.playSound(p.getLocation(), Sound.valueOf("NOTE_PLING"), 10, 10);
+            }
             for (Player player : Bukkit.getOnlinePlayers()) {
                 if (player.hasPermission("advancedbugreporter.receive")) {
-                    player.playSound(player.getLocation(), Sound.NOTE_PLING, 10, 10);
+                    if (Bukkit.getVersion().contains("1.9")) {
+                        p.playSound(p.getLocation(), Sound.valueOf("BLOCK_NOTE_PLING"), 10, 10);
+                    } else {
+                        p.playSound(p.getLocation(), Sound.valueOf("NOTE_PLING"), 10, 10);
+                    }
                     player.sendMessage("§8[§cAdvancedBugReporter§8] §8[§2#" + id + "§8] §8[§2" + p.getName() + "§8] §7" + reportText);
                     getJsonManager.addStaffer(id, player.getName());
                 }
