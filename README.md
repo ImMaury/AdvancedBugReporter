@@ -1,4 +1,4 @@
-# AdvancedBugReporter [![Release](https://img.shields.io/badge/latest%20release-v0.1.1-green.svg)](https://github.com/ImMaury/AdvancedBugReporter/releases)
+# AdvancedBugReporter [![Release](https://img.shields.io/badge/latest%20release-v0.1.2-green.svg)](https://github.com/ImMaury/AdvancedBugReporter/releases)
 [Documentation](https://github.com/ImMaury/AdvancedBugReporter/wiki) |
 [Spigot Page](https://www.spigotmc.org/resources/advancedbugreporter.22556/)
 
